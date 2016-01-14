@@ -1,0 +1,54 @@
+
+
+
+function primeFactors (num) {
+    var input = num;
+    var factors = [];
+    for (var i = 2; i <= input; i++) {
+        while(input % i === 0 && input !== 1) {
+            factors.push(i);
+            input = input/i;
+        }
+    }
+    return factors;
+}
+
+module.exports = {
+    for : primeFactors
+}
+
+
+-Creates function called primeFactors that accepts one argument named num
+-creates variable called input sets it to the parameter 'num'
+-creates an empty array called factors
+-create for loop that goes through all numbers through the input
+-create while loop for when the input  is divisible by the iterator & the input is not equal to one
+-in the while loop, push the integer to the factors array
+-divide the input by the iterator before the next loop
+-at the end, retrun the factors array
+
+//create named anon funciton called findFactor that accepts a single argument num
+var findFactor = function(num) {
+    //if parameter is less than or equal to 1, return an empty string
+  if (num <= 1) {return [];}
+    //set variable i to 2
+  var i = 2;
+    //while the input is divisible by i, iterate i
+  while (num % i) {i++;}
+    //create an empty factors array
+  var factors = [];
+    //push i to factors
+  factors.push(i);
+    //create variable named addtl and apply the findFactor function to the next division of the num
+  var addtl = findFactor(num / i);
+    //if the findFactor function returns an empty array, stop. Otherwise add the addtl factor to factors & return
+  if (addtl.length) {factors = factors.concat(addtl);}
+  return factors;
+};
+
+module.exports = primeFactors = {
+  for: findFactor
+};
+
+
+
