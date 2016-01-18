@@ -43,6 +43,7 @@ var findFactor = function(num) {
   var addtl = findFactor(num / i);
     //if the findFactor function returns an empty array, stop. Otherwise add the addtl factor to factors & return
   if (addtl.length) {factors = factors.concat(addtl);}
+    
   return factors;
 };
 
