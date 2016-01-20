@@ -8,7 +8,7 @@ function getVowels(arr) {
   // loop through `letters`, passing each letter to `isVowel()`
   var vowelsArray = arr.filter(function(letter){
     console.log('return ' + isVowel(letter));
-    return isVowel(letter);
+    return isVowel(letter)[0] === letter;
   });
   return vowelsArray;
 }
@@ -18,7 +18,7 @@ function getVowels(arr) {
 function isVowel(letter) {
   // return true if a letter is a vowel
   var vowels = ['a','e','i','o','u'];
-  vowels.filter(function(vowel){
+  return vowels.filter(function(vowel){
     console.log("vowel: " + vowel, "letter: " + letter, "truthy: " + (vowel === letter));
     return (vowel === letter);
   });
