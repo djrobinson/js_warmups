@@ -1,0 +1,22 @@
+h1, h2, h3 {
+  text-align: center;
+}
+
+input, button {
+  display: block;
+  margin: 20px auto 20px auto
+}
+
+body {
+  background-image: url(http://eskipaper.com/images/earth-background-2.jpg);
+  background-size: cover;
+}
+
+section {
+  display: block;
+  width: 80%;
+  padding: 50px;
+  margin: 50px auto 50px auto;
+  background: rgba(255, 255, 255, 0.7);
+  z-index: 1;
+}
